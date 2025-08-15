@@ -12,7 +12,6 @@ body {
     line-height: 1.6;
 }
 
-/* Navigation */
 header {
     background: rgba(34,34,34,0.85); /* slightly transparent for modern feel */
     color: #fff;
@@ -52,7 +51,6 @@ nav {
     color: #222;
 }
 
-/* Hero Section */
 .hero {
     text-align: center;
     padding: 60px 20px;
@@ -90,7 +88,6 @@ nav {
     background: #FFD6BA;
 }
 
-/* About Section */
 .about {
     text-align: center;
     padding: 40px 20px;
@@ -112,7 +109,6 @@ nav {
     font-size: 1.1rem;
 }
 
-/* Footer */
 footer {
     background: rgba(34,34,34,0.85);
     color: #fff;
@@ -120,4 +116,30 @@ footer {
     padding: 15px;
     margin-top: 30px;
     box-shadow: 0 -4px 10px rgba(0,0,0,0.2);
+}
+.home-image {
+    width: 100%;
+    max-width: 900px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.home-image:hover {
+    transform: scale(1.02); /* subtle zoom on hover */
+}
+
+.hero, .about {
+    background: rgba(255,255,255,0.85);
+    border-radius: 15px;
+    margin: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.hero h2, .about h3 {
+    font-family: 'Pacifico', cursive; /* cursive headings */
+    color: #333;
 }
