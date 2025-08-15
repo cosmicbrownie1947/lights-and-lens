@@ -6,16 +6,18 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom, #6a0dad,#f9d71c);
-    color: #000;
+    /* Pastel sunset gradient */
+    background: linear-gradient(to bottom right, #FFD6BA, #FFB7C5, #B9D6FF);
+    color: #333;
     line-height: 1.6;
 }
 
 /* Navigation */
 header {
-    background: #222;
+    background: rgba(34,34,34,0.85); /* slightly transparent for modern feel */
     color: #fff;
     padding: 10px 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 nav {
@@ -27,6 +29,7 @@ nav {
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
+    font-family: 'Pacifico', cursive; /* cursive logo */
 }
 
 .nav-links {
@@ -39,27 +42,32 @@ nav {
     color: #fff;
     text-decoration: none;
     padding: 5px 10px;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
+    border-radius: 4px;
 }
 
 .nav-links li a:hover,
 .nav-links li a.active {
-    background: #ff9800;
-    border-radius: 4px;
+    background: #ffb7c5; /* pastel hover */
+    color: #222;
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
     padding: 60px 20px;
-    background: url('hero-image.jpg') center/cover no-repeat;
-    color: white;
-    background-color: #00000088; /* fallback if image doesn't load */
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('hero-image.jpg') center/cover no-repeat;
+    color: #fff;
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 .hero h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    font-family: 'Pacifico', cursive; /* cursive heading */
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
 
 .hero p {
@@ -70,28 +78,32 @@ nav {
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background: #ff9800;
-    color: #fff;
+    background: #FFB7C5;
+    color: #222;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 4px;
-    transition: background 0.3s ease;
+    border-radius: 25px;
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
-    background: #e68900;
+    background: #FFD6BA;
 }
 
 /* About Section */
 .about {
     text-align: center;
     padding: 40px 20px;
-    background: #fff;
+    background: rgba(255,255,255,0.85);
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
 .about h3 {
     font-size: 2rem;
     margin-bottom: 15px;
+    font-family: 'Pacifico', cursive; /* cursive subheading */
 }
 
 .about p {
@@ -102,10 +114,10 @@ nav {
 
 /* Footer */
 footer {
-    background: #222;
+    background: rgba(34,34,34,0.85);
     color: #fff;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     margin-top: 30px;
-
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.2);
 }
