@@ -1,210 +1,58 @@
-/* ========================
-   GLOBAL RESET & BODY
-======================== */
-* {
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+/* General body styling */
+body {
+    font-family: 'Dancing Script', cursive;
+    background: linear-gradient(to bottom, #dcecd6, #e6e0f5); /* lighter sage green fading to lavender */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom, #FFC1E3, #B3D9FF); /* pastel pink to pastel blue */
-    color: #000;
-    line-height: 1.6;
-}
-
-/* ========================
-   HEADER & NAVIGATION
-======================== */
+/* Header styling */
 header {
-    background: #ffffff; /* white box for logo */
-    padding: 15px 20px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    margin: 20px;
-}
-
-nav {
+    background-color: #a8c1a5; /* pastel sage green */
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo {
-    font-family: 'Pacifico', cursive; /* cursive font */
-    font-size: 2rem;
-    font-weight: normal;
-    color: #FF6F91; /* soft pink for logo text */
+/* Header buttons */
+header button {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'Dancing Script', cursive;
+    transition: all 0.3s ease;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 15px;
+header button:hover {
+    background-color: white;
+    color: #a8c1a5; /* text changes to match header color on hover */
 }
 
-.nav-links li a {
-    color: #333;
-    text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 6px;
-    transition: background 0.3s ease, color 0.3s ease;
+/* Images */
+img {
+    border-radius: 15px; /* rounded corners */
+    max-width: 100%;
+    height: auto;
 }
 
-.nav-links li a:hover,
-.nav-links li a.active {
-    background: rgba(179, 217, 255, 0.8); /* pastel blue hover */
-    color: #000;
+/* General page buttons (outside header) */
+button {
+    background-color: #d8c6f0; /* pastel lavender */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-family: 'Dancing Script', cursive;
+    transition: all 0.3s ease;
 }
 
-/* ========================
-   HERO SECTION
-======================== */
-.hero {
-    text-align: center;
-    padding: 60px 20px;
-    background: url('hero-image.jpg') center/cover no-repeat;
-    color: #fff;
-    background-color: rgba(0,0,0,0.2); /* overlay if image fails */
-    border-radius: 15px;
-    margin: 20px;
-}
-
-.hero h2 {
-    font-family: 'Pacifico', cursive;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-/* ========================
-   BUTTONS
-======================== */
-.btn {
-    display: inline-block;
-    padding: 12px 24px;
-    background: #FFB6C1; /* pretty pastel pink */
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 12px;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.btn:hover {
-    background: #B3D9FF; /* pastel blue on hover */
-    transform: scale(1.05);
-}
-
-/* ========================
-   ABOUT SECTION
-======================== */
-.about {
-    text-align: center;
-    padding: 40px 20px;
-    background: rgba(255,255,255,0.85);
-    border-radius: 15px;
-    margin: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.about h2, .about h3 {
-    font-family: 'Pacifico', cursive;
-    color: #333;
-}
-
-.about p {
-    max-width: 700px;
-    margin: 0 auto 20px auto;
-    font-size: 1.1rem;
-}
-
-/* ========================
-   HOMEPAGE IMAGE
-======================== */
-.home-image {
-    width: 100%;
-    max-width: 900px;
-    display: block;
-    margin: 20px auto;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
-}
-
-.home-image:hover {
-    transform: scale(1.02);
-}
-
-/* ========================
-   FOOTER
-======================== */
-footer {
-    background: #ffffff; /* white footer box */
-    color: #333;
-    text-align: center;
-    padding: 15px;
-    margin-top: 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-/* ========================
-   ABOUT PAGE TEAM SECTION
-======================== */
-.about-page .team-section {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-.about-page .team-section h2 {
-    font-family: 'Pacifico', cursive;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.about-page .team-container {
-    background: #ffffff;
-    border-radius: 15px;
-    padding: 30px 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-.about-page .team-member {
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-    gap: 20px;
-}
-
-.about-page .team-member.flip {
-    flex-direction: row-reverse;
-}
-
-.about-page .team-member img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.about-page .member-info h3 {
-    font-family: 'Arial', sans-serif;
-    font-weight: 600;
-    font-size: 1.5rem;
-    margin: 0 0 10px 0;
-}
-
-.about-page .member-info p {
-    font-family: 'Arial', sans-serif;
-    font-size: 1rem;
-    line-height: 1.5;
-    margin: 0;
+button:hover {
+    background-color: #cbb8e5; /* slightly darker lavender on hover */
 }
