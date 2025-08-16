@@ -20,3 +20,12 @@ and adding character to the page to bring it to life.
 It will also include images and font stylizing. I
 wanted to get the pages done first before going into
 the style of the page.
+
+August 15, 2025
+This is the final update of my page. All four of the 
+top buttons work, along with the two articles on the 
+Blog page. This update mainly focused on the styling
+of everything and adding the images. while it took
+some work it definitely got there! My main sturggle 
+was keeping the css orderly in order to make sure that
+the pages were all cohesive and still worked.
