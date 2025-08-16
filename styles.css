@@ -1,174 +1,104 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap'); /* example font for headers */
 
 body {
-    font-family: 'Arial', sans-serif;
-    /* Pastel sunset gradient */
-    background: linear-gradient(to bottom right, #FFD6BA, #FFB7C5, #B9D6FF);
-    color: #333;
-    line-height: 1.6;
+    font-family: Garamond, serif;
+    color: black;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #FFD1DC, #FFE0A3, #B2E2F0); /* pastel sunset gradient */
 }
 
-/* Navigation */
 header {
-    background: rgba(34,34,34,0.85); /* slightly transparent for modern feel */
-    color: #fff;
-    padding: 10px 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    background-color: #333333; /* dark grey */
+    color: white;
+    padding: 15px 20px;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    font-family: 'Pacifico', cursive; /* cursive logo */
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-}
-
-.nav-links li a {
-    color: #fff;
+header nav a {
+    color: white;
     text-decoration: none;
-    padding: 5px 10px;
-    transition: all 0.3s ease;
-    border-radius: 4px;
-}
-
-.nav-links li a:hover,
-.nav-links li a.active {
-    background: #ffb7c5; /* pastel hover */
-    color: #222;
-}
-
-/* Hero Section */
-.hero {
-    text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('hero-image.jpg') center/cover no-repeat;
-    color: #fff;
-    border-radius: 15px;
-    margin: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-.hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    font-family: 'Pacifico', cursive; /* cursive heading */
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #FFB7C5;
-    color: #222;
-    text-decoration: none;
+    margin: 0 15px;
     font-weight: bold;
-    border-radius: 25px;
-    transition: all 0.3s ease;
 }
 
-.btn:hover {
-    background: #FFD6BA;
+header nav a:hover {
+    text-decoration: underline;
 }
 
-/* About Section */
-.about {
+h1.page-title {
+    font-family: 'Dancing Script', cursive;
     text-align: center;
-    padding: 40px 20px;
-    background: rgba(255,255,255,0.85);
+    margin-top: 20px;
+    color: black;
+}
+
+button.main-btn {
+    background-color: #ADD8E6; /* light blue */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.main-btn:hover {
+    background-color: #87CEEB; /* slightly darker blue */
+}
+
+button.secondary-btn {
+    background-color: #FF69B4; /* pink */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.secondary-btn:hover {
+    background-color: #FF85C1; /* slightly lighter pink */
+}
+
+.info-box {
+    background-color: white;
     border-radius: 15px;
-    margin: 20px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1000px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.about h3 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    font-family: 'Pacifico', cursive; /* cursive subheading */
+.info-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover; /* ensures image fits nicely in box */
+    display: block;
+    margin-top: 10px;
 }
 
-.about p {
-    max-width: 700px;
-    margin: 0 auto 20px auto;
-    font-size: 1.1rem;
+h2, h3, h4 {
+    font-family: 'Libre Franklin', sans-serif;
+    color: black;
 }
 
-/* Footer */
 footer {
-    background: rgba(34,34,34,0.85);
-    color: #fff;
+    background-color: #333333; /* dark grey */
+    color: white;
     text-align: center;
-    padding: 15px;
-    margin-top: 30px;
-    box-shadow: 0 -4px 10px rgba(0,0,0,0.2);
-}
-/* Image styling */
-.home-image {
-    width: 100%;
-    max-width: 900px;
-    display: block;
-    margin: 20px auto;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
+    padding: 20px;
+    margin-top: 40px;
 }
 
-.home-image:hover {
-    transform: scale(1.02); /* subtle zoom on hover */
-}
+@media (max-width: 768px) {
+    header nav a {
+        display: block;
+        margin: 10px 0;
+    }
 
-/* Ensure hero and about sections match pastel sunset theme */
-.hero, .about {
-    background: rgba(255,255,255,0.85);
-    border-radius: 15px;
-    margin: 20px;
-    padding: 30px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-/* Image styling */
-.home-image {
-    width: 100%;
-    max-width: 900px;
-    display: block;
-    margin: 20px auto;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
-}
-
-.home-image:hover {
-    transform: scale(1.02); /* subtle zoom on hover */
-}
-
-/* Ensure hero and about sections match pastel sunset theme */
-.hero, .about {
-    background: rgba(255,255,255,0.85);
-    border-radius: 15px;
-    margin: 20px;
-    padding: 30px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.hero h2, .about h3 {
-    font-family: 'Pacifico', cursive; /* cursive headings */
-    color: #333;
+    .info-box {
+        margin: 20px 10px;
+    }
 }
