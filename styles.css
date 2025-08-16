@@ -140,3 +140,66 @@ footer {
         align-items: center;
     }
 }
+/* Hero Section */
+.hero h2 {
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* Image Section */
+.image-section img.home-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Buttons */
+button.main-btn {
+    background-color: #ADD8E6; /* light blue */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0 auto;
+}
+
+button.main-btn:hover {
+    background-color: #87CEEB;
+}
+
+button.secondary-btn {
+    background-color: #FF69B4; /* pink */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0 auto;
+}
+
+button.secondary-btn:hover {
+    background-color: #FF85C1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+}
