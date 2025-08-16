@@ -8,41 +8,51 @@ body {
     color: black;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #FFD1DC, #FFE0A3, #B2E2F0); /* pastel sunset gradient */
+    background: linear-gradient(135deg, #FFD1DC, #FFE0A3, #B2E2F0);
 }
 
-/* Header */
-header {
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: #333333;
-    color: white;
-    padding: 15px 20px;
+    padding: 15px 30px;
+    border-bottom: 3px solid #555555;
 }
 
-header .logo {
+.navbar .logo {
     font-family: 'Dancing Script', cursive;
     font-size: 2rem;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    padding: 0;
+    color: white;
     margin: 0;
 }
 
-nav a {
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
 }
 
-nav a.active {
-    text-decoration: underline;
+.navbar .nav-links a.active {
+    background-color: #ADD8E6; /* light blue highlight */
+    color: black;
 }
 
-nav a:hover {
-    text-decoration: underline;
+.navbar .nav-links a:hover {
+    background-color: #87CEEB;
+    color: black;
 }
 
 /* White content boxes */
@@ -55,22 +65,22 @@ nav a:hover {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+/* Page titles */
+.page-title, .hero-title {
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
 /* Section headers */
 h2, h3, h4 {
     font-family: 'Libre Franklin', sans-serif;
     color: black;
 }
 
-/* Page title for hero or main headings */
-.hero-title, .page-title {
-    font-family: 'Dancing Script', cursive;
-    text-align: center;
-    margin-bottom: 15px;
-}
-
 /* Buttons */
 button.primary-btn {
-    background-color: #ADD8E6; /* light blue */
+    background-color: #ADD8E6;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -86,7 +96,7 @@ button.primary-btn:hover {
 }
 
 button.secondary-btn {
-    background-color: #FF69B4; /* pink */
+    background-color: #FF69B4;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -129,7 +139,7 @@ button.secondary-btn:hover {
     text-align: center;
 }
 
-/* Homepage image section */
+/* Homepage images */
 .image-section img {
     width: 100%;
     height: auto;
@@ -150,10 +160,21 @@ footer {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    nav ul {
+    .navbar {
         flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+        width: 100%;
         gap: 10px;
-        align-items: center;
+        margin-top: 10px;
+    }
+
+    .navbar .nav-links a {
+        width: 100%;
+        text-align: center;
     }
 
     .team-container {
