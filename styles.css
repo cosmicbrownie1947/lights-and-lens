@@ -51,129 +51,95 @@ header .nav-links li a:hover {
     border-radius: 5px;
 }
 
-/* Section Headings */
-section h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-}
-
-/* Buttons */
-button, .btn {
-    background-color: #d8c6f0; /* pastel lavender */
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-family: 'Dancing Script', cursive;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-button:hover, .btn:hover {
-    background-color: #cbb8e5;
-}
-
-/* Articles Section */
-.articles-section {
+/* General Sections */
+section {
     padding: 50px 20px;
     max-width: 1000px;
     margin: 0 auto;
     text-align: center;
 }
 
-.articles-container {
+/* Buttons (general, outside header) */
+button {
+    background-color: #d8c6f0; /* pastel lavender */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-family: 'Dancing Script', cursive;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #cbb8e5; /* slightly darker lavender on hover */
+}
+
+/* Team Section */
+.team-section {
+    padding: 50px 20px;
+    background-color: #e6f0e4; /* light sage green */
+}
+
+.team-container {
     display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/* Each team member */
+.team-member {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     gap: 30px;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.blog-article {
-    background-color: #e6f0e4; /* light sage green */
-    border-radius: 15px;
-    padding: 20px;
-    flex: 1 1 45%; /* two columns */
-    box-sizing: border-box;
+.team-member.flip {
+    flex-direction: row-reverse; /* flips image and text */
+}
+
+.team-member img {
+    width: 250px;
+    height: auto;
+    border-radius: 20px; /* rounded corners */
+    object-fit: cover;
+}
+
+.member-info {
+    max-width: 400px;
     text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.blog-article:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-.blog-article h3 {
+.member-info h3 {
     font-family: 'Dancing Script', cursive;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 10px;
 }
 
-.blog-article p {
+.member-info p {
     font-size: 1rem;
     line-height: 1.5;
 }
 
-/* Popular Articles */
-.popular-articles ul {
-    list-style: none;
-    padding: 0;
-}
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .team-member, .team-member.flip {
+        flex-direction: column;
+        text-align: center;
+    }
 
-.popular-articles ul li {
-    margin-bottom: 10px;
-}
-
-.popular-articles ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-}
-
-.popular-articles ul li a:hover {
-    color: #a8c1a5; /* pastel sage hover */
-}
-
-/* Subscribe Section */
-#subscribe form {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-#subscribe input[type="email"] {
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-family: 'Dancing Script', cursive;
-    flex: 1 1 250px;
+    .member-info {
+        text-align: center;
+    }
 }
 
 /* Footer */
-footer.white {
+footer {
     background-color: #a8c1a5;
     color: white;
     padding: 20px;
     text-align: center;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .articles-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .blog-article {
-        flex: 1 1 100%;
-        text-align: center;
-    }
-
-    #subscribe form {
-        flex-direction: column;
-    }
 }
