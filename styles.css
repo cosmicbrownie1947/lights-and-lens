@@ -11,9 +11,9 @@ body {
     background: linear-gradient(135deg, #FFD1DC, #FFE0A3, #B2E2F0); /* pastel sunset gradient */
 }
 
-/* Header (main navigation) */
+/* Header */
 header {
-    background-color: #333333; /* dark grey */
+    background-color: #333333;
     color: white;
     padding: 15px 20px;
 }
@@ -23,7 +23,7 @@ header .logo {
     font-size: 2rem;
 }
 
-header nav ul {
+nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
@@ -31,28 +31,22 @@ header nav ul {
     margin: 0;
 }
 
-header nav a {
+nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
-header nav a.active {
+nav a.active {
     text-decoration: underline;
 }
 
-header nav a:hover {
+nav a:hover {
     text-decoration: underline;
 }
 
-/* Page title and section headers */
-h2 {
-    font-family: 'Libre Franklin', sans-serif;
-    color: black;
-}
-
-/* White boxes */
-.white-box {
+/* White content boxes */
+.section-box {
     background-color: white;
     border-radius: 15px;
     padding: 25px;
@@ -61,8 +55,21 @@ h2 {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+/* Section headers */
+h2, h3, h4 {
+    font-family: 'Libre Franklin', sans-serif;
+    color: black;
+}
+
+/* Page title for hero or main headings */
+.hero-title, .page-title {
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
 /* Buttons */
-button.main-btn {
+button.primary-btn {
     background-color: #ADD8E6; /* light blue */
     color: white;
     border: none;
@@ -70,9 +77,11 @@ button.main-btn {
     font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
+    display: block;
+    margin: 20px auto 0 auto;
 }
 
-button.main-btn:hover {
+button.primary-btn:hover {
     background-color: #87CEEB;
 }
 
@@ -84,6 +93,8 @@ button.secondary-btn {
     font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
+    display: block;
+    margin: 20px auto 0 auto;
 }
 
 button.secondary-btn:hover {
@@ -118,6 +129,16 @@ button.secondary-btn:hover {
     text-align: center;
 }
 
+/* Homepage image section */
+.image-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
 /* Footer */
 footer {
     background-color: #333333;
@@ -129,7 +150,7 @@ footer {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    header nav ul {
+    nav ul {
         flex-direction: column;
         gap: 10px;
         align-items: center;
@@ -137,69 +158,6 @@ footer {
 
     .team-container {
         flex-direction: column;
-        align-items: center;
-    }
-}
-/* Hero Section */
-.hero h2 {
-    font-family: 'Dancing Script', cursive;
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-.hero p {
-    text-align: center;
-    font-size: 1.1rem;
-}
-
-/* Image Section */
-.image-section img.home-image {
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
-}
-
-/* Buttons */
-button.main-btn {
-    background-color: #ADD8E6; /* light blue */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    display: block;
-    margin: 20px auto 0 auto;
-}
-
-button.main-btn:hover {
-    background-color: #87CEEB;
-}
-
-button.secondary-btn {
-    background-color: #FF69B4; /* pink */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    display: block;
-    margin: 20px auto 0 auto;
-}
-
-button.secondary-btn:hover {
-    background-color: #FF85C1;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
         align-items: center;
     }
 }
