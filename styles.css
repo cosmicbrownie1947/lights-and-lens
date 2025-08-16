@@ -1,65 +1,47 @@
-/* Import Google Font */
+//* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
-/* General Body Styling */
+/* General body styling */
 body {
     font-family: 'Dancing Script', cursive;
+    background: linear-gradient(to bottom, #dcecd6, #e6e0f5); /* lighter sage green fading to lavender */
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #dcecd6, #e6e0f5); /* lighter sage green to lavender */
-    color: #333;
 }
 
-/* Header */
+/* Header styling */
 header {
     background-color: #a8c1a5; /* pastel sage green */
     padding: 20px;
-}
-
-header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header .logo {
+/* Header buttons */
+header button {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
     font-family: 'Dancing Script', cursive;
-    font-size: 2rem;
-    color: white;
-}
-
-header .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-}
-
-header .nav-links li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    padding: 8px 12px;
     transition: all 0.3s ease;
 }
 
-header .nav-links li a.active,
-header .nav-links li a:hover {
+header button:hover {
     background-color: white;
-    color: #a8c1a5;
-    border-radius: 5px;
+    color: #a8c1a5; /* text changes to match header color on hover */
 }
 
-/* General Sections */
-section {
-    padding: 50px 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
+/* Images */
+img {
+    border-radius: 15px; /* rounded corners */
+    max-width: 100%;
+    height: auto;
 }
 
-/* Buttons (general, outside header) */
+/* General page buttons (outside header) */
 button {
     background-color: #d8c6f0; /* pastel lavender */
     border: none;
@@ -73,73 +55,4 @@ button {
 
 button:hover {
     background-color: #cbb8e5; /* slightly darker lavender on hover */
-}
-
-/* Team Section */
-.team-section {
-    padding: 50px 20px;
-    background-color: #e6f0e4; /* light sage green */
-}
-
-.team-container {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-}
-
-/* Each team member */
-.team-member {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 30px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.team-member.flip {
-    flex-direction: row-reverse; /* flips image and text */
-}
-
-.team-member img {
-    width: 250px;
-    height: auto;
-    border-radius: 20px; /* rounded corners */
-    object-fit: cover;
-}
-
-.member-info {
-    max-width: 400px;
-    text-align: left;
-}
-
-.member-info h3 {
-    font-family: 'Dancing Script', cursive;
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
-.member-info p {
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-/* Responsive for smaller screens */
-@media (max-width: 768px) {
-    .team-member, .team-member.flip {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .member-info {
-        text-align: center;
-    }
-}
-
-/* Footer */
-footer {
-    background-color: #a8c1a5;
-    color: white;
-    padding: 20px;
-    text-align: center;
 }
