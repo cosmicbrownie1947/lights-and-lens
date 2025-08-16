@@ -9,7 +9,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom, #FFDAB9, #FFB6C1); /* pastel sunset */
+    background: linear-gradient(to bottom, #FFDAB9, #FFB6C1); /* pastel sunset gradient */
     color: #000;
     line-height: 1.6;
 }
@@ -18,7 +18,7 @@ body {
    HEADER & NAVIGATION
 ======================== */
 header {
-    background: #222;
+    background: rgba(34,34,34,0.85); /* slightly transparent dark */
     color: #fff;
     padding: 10px 20px;
 }
@@ -45,12 +45,12 @@ nav {
     text-decoration: none;
     padding: 5px 10px;
     transition: background 0.3s ease;
+    border-radius: 4px;
 }
 
 .nav-links li a:hover,
 .nav-links li a.active {
-    background: #ff9800;
-    border-radius: 4px;
+    background: #ffb347; /* softer orange */
 }
 
 /* ========================
@@ -60,8 +60,10 @@ nav {
     text-align: center;
     padding: 60px 20px;
     background: url('hero-image.jpg') center/cover no-repeat;
-    color: white;
-    background-color: #00000088;
+    color: #fff;
+    background-color: rgba(0,0,0,0.4); /* overlay if image fails */
+    border-radius: 15px;
+    margin: 20px;
 }
 
 .hero h2 {
@@ -78,16 +80,17 @@ nav {
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background: #ff9800;
+    background: #ffb347; /* pastel orange */
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 4px;
-    transition: background 0.3s ease;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .btn:hover {
-    background: #e68900;
+    background: #ffcc7f;
+    transform: scale(1.05);
 }
 
 /* ========================
@@ -134,11 +137,12 @@ nav {
    FOOTER
 ======================== */
 footer {
-    background: #222;
+    background: rgba(34,34,34,0.85);
     color: #fff;
     text-align: center;
     padding: 10px;
     margin-top: 30px;
+    border-radius: 8px 8px 0 0;
 }
 
 /* ========================
